@@ -17,7 +17,14 @@ class ComicFactory extends Factory
     public function definition()
     {
         return [
-            //
+            
+            'title' => fake() ->word(),
+            'release_year' => fake() -> datetime(),
+            'price' => fake() -> randomFloat(2,  20,  100),
+            'barcode' => fake() -> unique() -> ean8(),
+            'disponibilità' => fake() -> randomDigit()
+
+
         ];
     }
 }

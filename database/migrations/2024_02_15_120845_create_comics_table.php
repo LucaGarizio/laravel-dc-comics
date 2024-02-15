@@ -18,8 +18,10 @@ return new class extends Migration
             
             $table->string('title');
             $table->date('release_year');
-            $table->decimal('price', 5, 2 ) ;
-            $table->boolean('disponibilità') -> default(true);
+            $table->decimal('price');
+            $table->integer('barcode') -> unique();
+            $table->integer('disponibilità');
+
             $table->timestamps();
         });
     }
