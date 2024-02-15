@@ -12,7 +12,8 @@ class ComicController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
+    {   
+        // mostrami tutti i  fumetti della tabella del database 
         $comics = Comic::all();
 
         return view('pages.index', compact('comics'));
@@ -24,8 +25,9 @@ class ComicController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
-        //
+    {   
+        // portami alla pagina create
+        return view('pages.create');
     }
 
     /**
@@ -35,8 +37,21 @@ class ComicController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        //
+    {   
+        // salva i dati nello store attraverso il forum alla pagina create
+        $data = $request -> all();
+
+        $newComic = new Comic();
+
+        $newComic -> title = $data['title'];
+        $newComic -> release = $data['release'];
+        $newComic -> price = $data['price'];
+        $newComic -> barcode = $data['barcode'];
+        $newComic -> availability = $data['availability'];
+
+        $newComic -> save();
+
+        return redirect() -> route('users.show', $newComic -> id);
     }
 
     /**
@@ -46,8 +61,11 @@ class ComicController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id)
-    {
-        //
+    {   
+        // mostra il  fumetto ricercato per id alla pagina show
+        $comic = Comic ::find($id);
+
+        return view('pages.show', compact('comic'));
     }
 
     /**

@@ -17,10 +17,10 @@ return new class extends Migration
             $table->id();
             
             $table->string('title');
-            $table->date('release_year');
+            $table->date('release');
             $table->decimal('price');
             $table->integer('barcode') -> unique();
-            $table->integer('disponibilità');
+            $table->integer('availability');
 
             $table->timestamps();
         });

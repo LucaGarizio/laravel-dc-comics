@@ -18,13 +18,11 @@ class ComicFactory extends Factory
     {
         return [
             
-            'title' => fake() ->word(),
-            'release_year' => fake() -> datetime(),
+            'title' => fake() ->sentence(10),
+            'release' => fake() -> datetime(),
             'price' => fake() -> randomFloat(2,  20,  100),
             'barcode' => fake() -> unique() -> ean8(),
-            'disponibilità' => fake() -> randomDigit()
-
-
+            'availability' => fake() -> randomDigit()
         ];
     }
 }

@@ -4,15 +4,15 @@
 @endsection
 @section('content')
     <h1>Fumetti: {{count($comics)}}</h1>
-
+    <a href="{{route('users.create')}}" class="btn btn-success">Inserisci nuovo fumetto</a>
     <ul>
         @foreach ($comics as $comic)
             <li>
-                titolo: {{$comic->title}} <br>
-               data di stampa: {{$comic ->release_year}} <br>
-               prezzo: {{$comic -> price}} <br>
-               bar-code: {{$comic -> barcode}} <br>
-               copie disponibili: {{$comic -> disponibilità}}
+                
+               Titolo: <br> 
+               <a href="{{route('users.show', $comic -> id)}}
+                ">{{$comic->title}} 
+                </a> 
             </li>
             <br>
         @endforeach
