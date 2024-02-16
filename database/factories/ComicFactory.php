@@ -18,7 +18,7 @@ class ComicFactory extends Factory
     {
         return [
             
-            'title' => fake() ->sentence(10),
+            'title' => fake() ->sentence(),
             'release' => fake() -> datetime(),
             'price' => fake() -> randomFloat(2,  20,  100),
             'barcode' => fake() -> unique() -> ean8(),

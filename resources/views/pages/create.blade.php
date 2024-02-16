@@ -3,7 +3,7 @@
     <title>Create</title>
 @endsection
 @section('content')
-   <form action="{{route('users.store')}}" method="POST">
+   <form action="{{route('comics.store')}}" method="POST">
     @csrf
     @method('POST')
 
