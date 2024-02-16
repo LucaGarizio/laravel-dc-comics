@@ -5,14 +5,18 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: #ddd;
+    font-family: "Times New Roman", Times, serif;
+}
 .col-4 {
     .card {
         height: 200px;
     }
 }
 
-body {
-    background-color: #ddd;
+span {
+    font-size: 20px;
 }
 ul {
     list-style: none;

@@ -3,9 +3,9 @@
     <title>Create</title>
 @endsection
 @section('content')
-<div class="row justify-content-center">
-    <h2 class="mt-4">Inserisci Nuovo Fumetto</h2>
-    <div class="col-5 bg-success">
+<div class="row justify-content-center" style="width: 100%; height:100vh;">
+    <div class="col bg-success">
+        <h2 class="mt-4">Inserisci Nuovo Fumetto</h2>
         <div class="card bg-success border-0">
             <form action="{{route('comics.store')}}" method="POST">
                 @csrf

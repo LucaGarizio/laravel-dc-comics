@@ -13,13 +13,13 @@
     
         @foreach ($comics as $comic)
         <div class="col-4 ">
-            <div class="card bg-success m-1 p-2">
-                <h4 class="pt-4">Titolo:</h4>
+            <div class="card bg-success mx-1 my-3 p-2">
+                <h4 class="pt-4 text-warning">Titolo:</h4>
                 <a href="{{route('comics.show', $comic -> id)}}">
                     <p class="mb-1 text-white">{{$comic->title}} </p>
                 </a>
                 <div class="card-body">
-                    <a href="{{route('comics.edit', $comic -> id)}}"><button class="btn btn-secondary mb-3 mt-0">Aggiorna</button></a> 
+                    <a href="{{route('comics.edit', $comic -> id)}}"><button class="btn btn-info mb-3 mt-0 me-4">Aggiorna</button></a> 
                     <form class="d-inline-block" method="POST" action="{{ route('comics.destroy', $comic -> id)}}">
                     @csrf
                     @method('DELETE')
