@@ -7,7 +7,7 @@
     @csrf
     @method('POST')
 
-    <p>Titolo</p>
+    <p class="mt-4">Titolo</p>
     <label for="title"></label>
     <input type="text" name="title"><br>
 
