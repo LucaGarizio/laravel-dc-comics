@@ -5,14 +5,16 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ComicController;
 
 Route::get('/', [ComicController :: class, 'index']) 
-    ->name('users.index');
+    ->name('comics.index');
 
-Route::get('/user/create', [ComicController :: class, 'create'])
-    ->name('users.create');
+Route::get('/comics/create', [ComicController :: class, 'create'])
+    ->name('comics.create');
 
-Route::post('/users', [ComicController :: class, 'store'])
-    ->name('users.store');
+Route::post('/comics', [ComicController :: class, 'store'])
+    ->name('comics.store');
 
-Route::get('/users/{id}', [ComicController :: class, 'show'])
-    ->name('users.show');
+Route::get('/comics/{id}', [ComicController :: class, 'show'])
+    ->name('comics.show');
 
+Route::delete('/comics/{id}', [ComicController :: class, 'destroy'])
+    ->name('comics.destroy');

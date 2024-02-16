@@ -51,7 +51,7 @@ class ComicController extends Controller
 
         $newComic -> save();
 
-        return redirect() -> route('users.show', $newComic -> id);
+        return redirect() -> route('comics.show', $newComic -> id);
     }
 
     /**
@@ -98,7 +98,9 @@ class ComicController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
-    {
-        //
+    {   
+        $comic = Comic ::find($id);
+        $comic -> delete();
+        return redirect() -> route('comics.index');
     }
 }
