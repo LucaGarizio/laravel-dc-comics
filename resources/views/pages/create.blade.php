@@ -13,23 +13,23 @@
 
                 <p class="mt-4">Titolo</p>
                 <label for="title"></label>
-                <input type="text" name="title">
+                <input style="width: 350px" type="text" name="title">
 
                 <p>Data di uscita</p>
                 <label for="release"></label>
-                <input type="text" name="release">
+                <input style="width: 350px" type="text" name="release">
 
                 <p>Prezzo</p>
                 <label for="price"></label>
-                <input type="text" name="price">
+                <input style="width: 350px" type="text" name="price">
 
                 <p>Codice a Barre</p>
                 <label for="barcode"></label>
-                <input type="text" name="barcode">
+                <input style="width: 350px" type="text" name="barcode">
 
                 <p>Disponibilitá</p>
                 <label for="availability"></label>
-                <input type="number" name="availability"><br>
+                <input style="width: 350px" type="number" name="availability"><br>
 
                 <input class="mt-4 btn btn-primary" type="submit" value="Inserisci">
             </form>
