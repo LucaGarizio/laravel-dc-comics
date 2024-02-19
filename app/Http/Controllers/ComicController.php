@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Comic;
+use App\Http\Requests\ComicFormRequest;
 class ComicController extends Controller
 {
     /**
@@ -36,7 +37,7 @@ class ComicController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ComicFormRequest $request)
     {   
         // salva i dati nello store attraverso il forum alla pagina create
         $data = $request -> all();
@@ -88,7 +89,7 @@ class ComicController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(ComicFormRequest $request, $id)
     {
      $comic = Comic::find($id);
      $data = $request -> all();

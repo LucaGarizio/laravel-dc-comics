@@ -8,6 +8,7 @@
 body {
     background-color: #ddd;
     font-family: "Times New Roman", Times, serif;
+    font-weight: 600;
 }
 .col-4 {
     .card {
@@ -34,18 +35,22 @@ ul {
 }
 
 p {
-    padding: 0;
     text-transform: uppercase;
     &:hover {
         color: white;
         transition: 1s ease-in-out;
     }
 }
+
 a {
     text-decoration: none;
     color: #333;
 }
 
-input {
-    margin: 0 0 20px;
+.btn-dark {
+    border: none;
+    &:hover {
+        background-color: red;
+        transition: 1s;
+    }
 }

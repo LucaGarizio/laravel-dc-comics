@@ -25,7 +25,7 @@
                         <form class="d-inline-block" method="POST" action="{{ route('comics.destroy', $comic -> id)}}">
                         @csrf
                         @method('DELETE')
-                        <button class="btn btn-danger">Rimuovi</button>
+                        <button class="btn btn-dark">Rimuovi</button>
                         </form>
                     </div>
                 </div>
